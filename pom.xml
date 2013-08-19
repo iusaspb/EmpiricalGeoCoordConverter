@@ -1,0 +1,101 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>EmpiricalGeoCoordConverter</artifactId>
+	<groupId>ru.spb.iusa.transport.egcc</groupId>
+	<version>0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>Empirical Geo Coord Converter</name>
+	<description>Empirical Geo Coord Converter</description>
+	<inceptionYear>2013</inceptionYear>
+	<url></url>
+
+	<build>
+
+		<defaultGoal>install</defaultGoal>
+		
+		<finalName>egcc</finalName>
+
+		<plugins>
+
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<archive>
+						<addMavenDescriptor>false</addMavenDescriptor>
+						<manifest>
+							<addClasspath>true</addClasspath>
+				            <mainClass>ru.spb.iusa.transport.egcc.FileConverter2</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	
+	<dependencies>
+		<dependency>
+			<groupId>gov.nist.math</groupId>
+			<artifactId>jama</artifactId>
+			<version>1.0.3</version>
+		</dependency>
+	</dependencies>
+
+	<licenses>
+		<license>
+			<name>CC0</name>
+			<url>http://creativecommons.org/publicdomain/zero/1.0/legalcode</url>
+			<distribution>repo</distribution>
+			<comments>CC0 is a public domain dedication from Creative Commons.</comments>
+		</license>
+	</licenses>
+
+	<organization>
+		<name></name>
+		<url></url>
+	</organization>
+
+	<developers>
+		<developer>
+			<id>iusa</id>
+			<name>Iurkevich Sergei </name>
+			<email>iusaserv@mail.ru</email>
+			<url></url>
+			<organization></organization>
+			<organizationUrl></organizationUrl>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<timezone>+4</timezone>
+			<properties>
+				<picUrl></picUrl>
+				<gtalk></gtalk>
+				<icq></icq>
+			</properties>
+		</developer>
+	</developers>
+
+	<contributors></contributors>
+
+</project>
